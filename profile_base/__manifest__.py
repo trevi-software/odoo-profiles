@@ -35,6 +35,7 @@
      # https://github.com/akretion/odoo-usability
      'base_partner_ref',
      'base_usability',
+     'eradicate_quick_create',
      'partner_tree_default',
 
      # https://github.com/OCA/server-brand
@@ -43,6 +44,9 @@
      # https://github.com/OCA/server-tools
      'auditlog',
      'scheduler_error_mailer',
+
+     # https://github.com/OCA/server-ux
+     'base_technical_features',
 
      # https://github.com/OCA/web
      'web_advanced_search',
