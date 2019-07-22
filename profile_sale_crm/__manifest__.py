@@ -34,7 +34,6 @@ Features
         # https://github.com/akretion/odoo-usability
         'product_usability',
         'sale_product_tree_default',
-        'sale_purchase_no_product_template_menu',
         'sale_quotation_title',
         'sale_usability',
 
