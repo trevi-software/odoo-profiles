@@ -31,6 +31,9 @@ Features
     "license": "AGPL-3",
     "depends": [
 
+	'crm',
+	'sale_management',
+
         # https://github.com/akretion/odoo-usability
         'product_usability',
         'sale_product_tree_default',
