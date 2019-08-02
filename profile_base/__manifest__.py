@@ -38,6 +38,9 @@
      'eradicate_quick_create',
      'partner_tree_default',
 
+     # https://github.com/OCA/partner-contact
+     'partner_vat_unique',
+
      # https://github.com/OCA/server-backend
      'base_user_role',
 
