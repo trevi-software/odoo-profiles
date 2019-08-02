@@ -38,6 +38,9 @@
      'eradicate_quick_create',
      'partner_tree_default',
 
+     # https://github.com/OCA/server-backend
+     'base_user_role',
+
      # https://github.com/OCA/server-brand
      'disable_odoo_online',
 
