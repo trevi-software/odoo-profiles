@@ -32,7 +32,7 @@
     'depends': [
 
      # https://github.com/OCA/product-attribute
-     'stock_code_unique',
+     'product_code_unique',
 
      # https://github.com/OCA/stock-logistics-reporting
      'stock_report_quantity_by_location',
