@@ -20,7 +20,7 @@
      # https://github.com/OCA/field-service
      'fieldservice',
      'fieldservice_agreement',
-     'feildservice_delivery',
+     'fieldservice_delivery',
      'fieldservice_maintenance',
      'fieldservice_recurring',
      'fieldservice_repair',
