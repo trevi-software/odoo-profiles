@@ -26,6 +26,9 @@
      'fieldservice_repair',
      'fieldservice_stock',
 
+     # https://github.com/OCA/project
+     'project_template',
+
      # https://github.com/trevi-software/osi-addons/
      'agreement_helpdesk',
      'agreement_sale_subscription',
