@@ -50,6 +50,9 @@
      'website_helpdesk',
      'website_helpdesk_form',
      'website_helpdesk_slides',
+
+     # https://github.com/Openworx/odoo-addons
+     'login_page',
     ],
     'data': [
     ],
