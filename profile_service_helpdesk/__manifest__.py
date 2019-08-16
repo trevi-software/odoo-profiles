@@ -14,6 +14,8 @@
 """,
     'depends': [
 
+     'l10n_et',
+
      # https://github.com/OCA/contract
      'agreement',
 
