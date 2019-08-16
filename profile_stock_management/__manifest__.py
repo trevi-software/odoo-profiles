@@ -31,6 +31,8 @@
 """,
     'depends': [
 
+     'l10n_et',
+
      # https://github.com/OCA/product-attribute
      'product_code_unique',
 
