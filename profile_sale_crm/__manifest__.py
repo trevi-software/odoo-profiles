@@ -32,6 +32,7 @@ Features
     "depends": [
 
 	'crm',
+        'l10n_et',
 	'sale_management',
 
         # https://github.com/akretion/odoo-usability
