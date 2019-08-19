@@ -31,6 +31,9 @@
      # https://github.com/OCA/project
      'project_template',
 
+     # https://github.com/OCA/website
+     'website_odoo_debranding',
+
      # https://github.com/trevi-software/osi-addons/
      'agreement_helpdesk',
      'agreement_sale_subscription',
