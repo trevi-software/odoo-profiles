@@ -33,9 +33,7 @@
  'depends': [
 
      # https://github.com/akretion/odoo-usability
-     'base_partner_ref',
      'base_usability',
-     'eradicate_quick_create',
      'partner_tree_default',
 
      # https://github.com/OCA/partner-contact
