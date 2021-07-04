@@ -26,7 +26,7 @@ Features
     """,
     "author": "TREVI Software Design and Computer Maintenance",
     "website": "http://",
-    "version": "12.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Sales Management",
     "license": "AGPL-3",
     "depends": [
@@ -37,16 +37,12 @@ Features
 
         # https://github.com/akretion/odoo-usability
         'product_usability',
-        'sale_product_tree_default',
-        'sale_quotation_title',
         'sale_usability',
 
         # https://github.com/OCA/crm
         'crm_claim',
-        'crm_claim_code',
-        'crm_claim_type',
+        'crm_lead_code',
         'crm_phonecall',
-        'crm_phonecall_summary_predefined',
     ],
     "data": [
     ],
