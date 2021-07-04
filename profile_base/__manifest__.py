@@ -22,7 +22,7 @@
 ###############################################################################
 
 {'name': 'Base Profile',
- 'version': '12.0.1.0.0',
+ 'version': '14.0.1.0.0',
  'author': 'Akretion, Trevi Software',
  'website': 'http://trevi.et',
  'license': 'AGPL-3',
@@ -34,9 +34,12 @@
 
      # https://github.com/akretion/odoo-usability
      'base_usability',
-     'partner_tree_default',
+     'base_partner_one2many_phone',
+     'partner_tree_default_base',
+     'partner_tree_default_contacts',
 
      # https://github.com/OCA/partner-contact
+     'partner_address_version',
      'partner_vat_unique',
 
      # https://github.com/OCA/server-backend
@@ -44,10 +47,10 @@
 
      # https://github.com/OCA/server-brand
      'disable_odoo_online',
+     'remove_odoo_enterprise',
 
      # https://github.com/OCA/server-tools
      'auditlog',
-     'scheduler_error_mailer',
 
      # https://github.com/OCA/server-ux
      'base_technical_features',
@@ -55,9 +58,12 @@
      # https://github.com/OCA/web
      'web_advanced_search',
      'web_dialog_size',
-     'web_export_view',
+     'web_drop_target',
+     'web_environment_ribbon',
+     'web_group_expand',
+     'web_listview_range_select',
+     'web_refresher',
      'web_responsive',
-     'web_searchbar_full_width',
  ],
  'data': [
  ],
