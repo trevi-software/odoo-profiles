@@ -34,7 +34,8 @@
 
      # https://github.com/akretion/odoo-usability
      'base_usability',
-     'partner_tree_default',
+     'partner_tree_default_base',
+     'partner_tree_default_contacts',
 
      # https://github.com/OCA/partner-contact
      'partner_vat_unique',
