@@ -22,7 +22,7 @@
 ###############################################################################
 
 {'name': 'Base Profile',
- 'version': '12.0.1.0.0',
+ 'version': '14.0.1.0.0',
  'author': 'Akretion, Trevi Software',
  'website': 'http://trevi.et',
  'license': 'AGPL-3',
