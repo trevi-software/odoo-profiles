@@ -51,7 +51,6 @@
 
      # https://github.com/OCA/server-tools
      'auditlog',
-     'scheduler_error_mailer',
 
      # https://github.com/OCA/server-ux
      'base_technical_features',
