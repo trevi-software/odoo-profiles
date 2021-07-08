@@ -26,7 +26,6 @@
      # https://github.com/OCA/field-service
      'fieldservice',
      'fieldservice_account',
-     'fieldservice_account_analytic',
      #'fieldservice_agreement',
      #'fieldservice_delivery',
      #'fieldservice_maintenance',
@@ -51,11 +50,12 @@
      'website_odoo_debranding',
 
      # https://github.com/trevi-software/osi-addons/
-     'agreement_helpdesk',
+     #'agreement_helpdesk',
      #'agreement_sale_subscription',
-     'fieldservice_agreement_helpdesk',
+     'fieldservice_account_analytic',
+     #'fieldservice_agreement_helpdesk',
      #'fieldservice_helpdesk_stock',
-     'helpdesk_fieldservice',
+     #'helpdesk_fieldservice',
      #'helpdesk_phone',
      #'helpdesk_resolution',
      #'helpdesk_stock',
