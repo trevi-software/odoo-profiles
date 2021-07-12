@@ -14,11 +14,11 @@
 """,
     'depends': [
 
-     'l10n_et',
-
      # https://github.com/OCA/contract
      'agreement',
+     'agreement_legal',
      'agreement_sale',
+     'agreement_serviceprofile',
      'contract',
      'contract_payment_mode',
      'contract_sale',
@@ -26,14 +26,17 @@
      # https://github.com/OCA/field-service
      'fieldservice',
      'fieldservice_account',
-     #'fieldservice_agreement',
-     #'fieldservice_delivery',
-     #'fieldservice_maintenance',
+     'fieldservice_account_analytic',
+     'fieldservice_activity',
+     'fieldservice_agreement',
+     'fieldservice_isp_flow',
      'fieldservice_project',
-     #'fieldservice_recurring',
-     #'fieldservice_repair',
+     'fieldservice_purchase',
+     'fieldservice_recurring',
+     'fieldservice_sale',
      'fieldservice_skill',
-     #'fieldservice_stock',
+     'fieldservice_stage_server_action',
+     'fieldservice_stage_validation',
      'fieldservice_timeline',
 
      # https://github.com/OCA/helpdesk
@@ -52,7 +55,6 @@
      # https://github.com/trevi-software/osi-addons/
      #'agreement_helpdesk',
      #'agreement_sale_subscription',
-     'fieldservice_account_analytic',
      #'fieldservice_agreement_helpdesk',
      #'fieldservice_helpdesk_stock',
      #'helpdesk_fieldservice',
