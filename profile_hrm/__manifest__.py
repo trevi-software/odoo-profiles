@@ -34,6 +34,10 @@
  'depends': [
 
      # https://github.com/OCA/hr
+     "hr_contract_reference",
+     "hr_employee_id",
+     "hr_employee_medical_examination",
+     "hr_employee_relative",
  ],
  'data': [
  ],
