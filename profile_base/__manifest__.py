@@ -55,6 +55,8 @@
         "web_listview_range_select",
         "web_refresher",
         "web_responsive",
+     	# https://github.com/OCA/social
+     	"mail_tracking",
     ],
     "data": [],
     "installable": True,
