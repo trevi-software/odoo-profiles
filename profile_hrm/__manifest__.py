@@ -35,9 +35,16 @@
 
      # https://github.com/OCA/hr
      "hr_contract_reference",
+     "hr_contract_status",
+     "hr_contract_values",
      "hr_employee_id",
      "hr_employee_medical_examination",
      "hr_employee_relative",
+     "hr_employee_seniority_months",
+     "hr_employee_status",
+     "hr_job_categories",
+     "hr_job_hierarchy",
+     "hr_photobooth",
  ],
  'data': [
  ],
