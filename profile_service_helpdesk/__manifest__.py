@@ -5,7 +5,7 @@
     "name": "Help Desk and Service Profile",
     "version": "14.0.1.0.0",
     "author": "TREVI Software",
-    "website": "https://github.com/OCA/odoo-profiles",
+    "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "LGPL-3",
     "images": ["static/src/img/main_screenshot.png"],
     "category": "Helpdesk",
