@@ -19,7 +19,7 @@
     "name": "Sale/CRM Profile",
     "summary": "Modules bundle for Sales & CRM",
     "author": "TREVI Software",
-    "website": "https://github.com/OCA/odoo-profiles",
+    "website": "https://github.com/trevi-software/odoo-profiles",
     "version": "14.0.1.0.0",
     "images": ["static/src/img/main_screenshot.png"],
     "category": "Sales Management",
