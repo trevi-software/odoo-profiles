@@ -1,50 +1,35 @@
-# -*- coding: utf-8 -*-
-###############################################################################
-#
-#   Module for OpenERP
-#   Copyright (C) 2014 Akretion (http://www.akretion.com).
-#   Copyright (C) 2019,2021 Trevi Software (http://trevi.et).
-#   @author Sébastien BEAU <sebastien.beau@akretion.com>
-#
-#   This program is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU Affero General Public License as
-#   published by the Free Software Foundation, either version 3 of the
-#   License, or (at your option) any later version.
-#
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU Affero General Public License for more details.
-#
-#   You should have received a copy of the GNU Affero General Public License
-#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-###############################################################################
+# Copyright (C) 2019,2021 TREVI Software
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {'name': 'HRM Profile',
+ 'summary': 'Complete Human Resources application',
  'version': '14.0.1.0.0',
- 'author': 'Akretion, Trevi Software',
+ 'author': 'Trevi Software',
  'website': 'http://trevi.et',
  'license': 'AGPL-3',
  'category': 'Human Resources',
- 'description': """
-    This will install the HR modules necessary to extend the base module.
-    Does not include Payroll.
- """,
  'depends': [
 
      # https://github.com/OCA/hr
+     # https://github.com/trevi-software/trevi-hr
+     "hr_accrual_bank",
+     "hr_benefit",
      "hr_contract_reference",
      "hr_contract_status",
-     "hr_contract_values",
+     "hr_contract_values_resource_schedule",
      "hr_employee_id",
      "hr_employee_medical_examination",
      "hr_employee_relative",
      "hr_employee_seniority_months",
      "hr_employee_status",
-     "hr_job_categories",
-     "hr_job_hierarchy",
+     "hr_job_change_state",
+     "hr_jobs_hierarchy",
+     "hr_job_transfer",
+     "hr_leave_type_unique",
      "hr_photobooth",
+     "trevi_hr_job_categories",
+     "trevi_hr_public_holidays",
+     "trevi_hr_usability",
  ],
  'data': [
  ],
