@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #########################################################################
 # Copyright (c) 2017-2019 TREVI Software Design and Computer Maintenance     #
 #                                                                       #
@@ -19,33 +18,25 @@
 {
     "name": "Sale/CRM Profile",
     "summary": "Modules bundle for Sales & CRM",
-    "description": """
-Features
-========
-* Mostly usability enhancements in Sales and CRM
-    """,
-    "author": "TREVI Software Design and Computer Maintenance",
-    "website": "http://",
+    "author": "TREVI Software",
+    "website": "https://github.com/OCA/odoo-profiles",
     "version": "14.0.1.0.0",
+    "images": ["static/src/img/main_screenshot.png"],
     "category": "Sales Management",
     "license": "AGPL-3",
     "depends": [
-
-	'crm',
-        'l10n_et',
-	'sale_management',
-
+        "crm",
+        "l10n_et",
+        "sale_management",
         # https://github.com/akretion/odoo-usability
-        'product_usability',
-        'sale_usability',
-
+        "product_usability",
+        "sale_usability",
         # https://github.com/OCA/crm
-        'crm_claim',
-        'crm_lead_code',
-        'crm_phonecall',
+        "crm_claim",
+        "crm_lead_code",
+        "crm_phonecall",
     ],
-    "data": [
-    ],
+    "data": [],
     "installable": True,
     "application": True,
 }
