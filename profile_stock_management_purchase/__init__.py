@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright (c) 2019 TREVI Software Design and Computer Maintenance.
