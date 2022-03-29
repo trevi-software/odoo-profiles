@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright (c) 2018 TREVI Software Design and Computer Maintenance.
+#    Copyright (c) 2018,2022 TREVI Software Design and Computer Maintenance.
 #    All Rights Reserved.
 #
 #    This program is free software: you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
     "name": "Stock Management Profile",
     "version": "14.0.1.0.0",
     "author": "TREVI Software",
-    "website": "https://github.com/OCA/odoo-profiles",
+    "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
     "images": ["static/src/img/main_screenshot.png"],
     "category": "Stock Management",
