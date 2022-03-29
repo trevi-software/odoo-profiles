@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
 ###############################################################################
 #
 #   Module for OpenERP
+#   Copyright (C) 2019,2021,2022 Trevi Software (http://trevi.et).
 #   Copyright (C) 2014 Akretion (http://www.akretion.com).
-#   Copyright (C) 2019 Trevi Software (http://trevi.et).
 #   @author Sébastien BEAU <sebastien.beau@akretion.com>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -21,53 +20,44 @@
 #
 ###############################################################################
 
-{'name': 'Base Profile',
- 'version': '14.0.1.0.0',
- 'author': 'Akretion, Trevi Software',
- 'website': 'http://trevi.et',
- 'license': 'AGPL-3',
- 'category': 'Generic Modules',
- 'description': """
-    This will install the minimal modules necessary to extend the base module.
- """,
- 'depends': [
-
-     # https://github.com/akretion/odoo-usability
-     'base_usability',
-     'base_partner_one2many_phone',
-     'partner_tree_default_base',
-     'partner_tree_default_contacts',
-
-     # https://github.com/OCA/partner-contact
-     'partner_address_version',
-     'partner_vat_unique',
-
-     # https://github.com/OCA/server-backend
-     'base_user_role',
-
-     # https://github.com/OCA/server-brand
-     'disable_odoo_online',
-     'remove_odoo_enterprise',
-
-     # https://github.com/OCA/server-tools
-     'auditlog',
-
-     # https://github.com/OCA/server-ux
-     'base_technical_features',
-
-     # https://github.com/OCA/web
-     'web_advanced_search',
-     'web_dialog_size',
-     'web_drop_target',
-     'web_environment_ribbon',
-     'web_group_expand',
-     'web_listview_range_select',
-     'web_refresher',
-     'web_responsive',
- ],
- 'data': [
- ],
- 'installable': True,
- 'auto_install': True,
- 'application': True,
- }
+{
+    "name": "Base Profile",
+    "version": "14.0.1.0.0",
+    "author": "Akretion, TREVI Software",
+    "website": "https://github.com/OCA/odoo-profiles",
+    "license": "AGPL-3",
+    "category": "Generic Modules",
+    "images": ["static/src/img/main_screenshot.png"],
+    "depends": [
+        # https://github.com/akretion/odoo-usability
+        "base_usability",
+        "base_partner_one2many_phone",
+        "partner_tree_default_base",
+        "partner_tree_default_contacts",
+        # https://github.com/OCA/partner-contact
+        "partner_address_version",
+        "partner_vat_unique",
+        # https://github.com/OCA/server-backend
+        "base_user_role",
+        # https://github.com/OCA/server-brand
+        "disable_odoo_online",
+        "remove_odoo_enterprise",
+        # https://github.com/OCA/server-tools
+        "auditlog",
+        # https://github.com/OCA/server-ux
+        "base_technical_features",
+        # https://github.com/OCA/web
+        "web_advanced_search",
+        "web_dialog_size",
+        "web_drop_target",
+        "web_environment_ribbon",
+        "web_group_expand",
+        "web_listview_range_select",
+        "web_refresher",
+        "web_responsive",
+    ],
+    "data": [],
+    "installable": True,
+    "auto_install": True,
+    "application": True,
+}
