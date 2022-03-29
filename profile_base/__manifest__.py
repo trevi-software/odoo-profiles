@@ -24,7 +24,7 @@
     "name": "Base Profile",
     "version": "14.0.1.0.0",
     "author": "Akretion, TREVI Software",
-    "website": "https://github.com/OCA/odoo-profiles",
+    "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
     "category": "Generic Modules",
     "images": ["static/src/img/main_screenshot.png"],
@@ -44,6 +44,7 @@
         "remove_odoo_enterprise",
         # https://github.com/OCA/server-tools
         "auditlog",
+        "mail_debrand",
         # https://github.com/OCA/server-ux
         "base_technical_features",
         # https://github.com/OCA/web
@@ -55,6 +56,8 @@
         "web_listview_range_select",
         "web_refresher",
         "web_responsive",
+        # https://github.com/OCA/social
+        "mail_tracking",
     ],
     "data": [],
     "installable": True,
