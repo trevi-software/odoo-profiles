@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright (c) 2018 TREVI Software Design and Computer Maintenance.
@@ -20,27 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Stock Management + Purchasing Profile',
-    'version': '12.0.1.0.0',
-    'author': 'Trevi Software',
-    'website': 'http://trevi.et',
-    'license': 'AGPL-3',
-    'category': 'Generic Modules',
-    'description': """
-    This will install modules for a fully functional stock management and
-    Purchasing system.
-""",
-    'depends': [
-
-     'profile_stock_management',
-
-     # https://github.com/OCA/stock-logistics-warehouse
-     'stock_mts_mto_rule',
-     'stock_orderpoint_purchase_link',
-     'stock_request_purchase',
+    "name": "Stock Management + Purchasing Profile",
+    "version": "14.0.1.0.0",
+    "author": "TREVI Software",
+    "website": "https://github.com/OCA/odoo-profiles",
+    "license": "AGPL-3",
+    "images": ["static/src/img/main_screenshot.png"],
+    "category": "Stock Management",
+    "depends": [
+        "profile_stock_management",
+        # https://github.com/OCA/stock-logistics-warehouse
+        "stock_mts_mto_rule",
+        "stock_orderpoint_purchase_link",
+        "stock_request_purchase",
     ],
-    'data': [
-    ],
-    'installable': True,
-    'application': True,
- }
+    "data": [],
+    "installable": True,
+    "application": True,
+}
