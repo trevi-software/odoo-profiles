@@ -16,7 +16,7 @@
         "hr_benefit_payroll",
         "hr_contract_values_payroll",
         "hr_employee_status_payroll",
-        "payroll_payslip_ammendment_contract_status",
+        "payroll_payslip_amendment_contract_status",
         "payroll_period_account",
         "payroll_period_base_lock",
         "payroll_period_contract_values",
