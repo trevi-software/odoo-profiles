@@ -30,6 +30,7 @@
         "fieldservice_account_analytic",
         "fieldservice_activity",
         "fieldservice_agreement",
+        "fieldservice_calendar",
         "fieldservice_isp_flow",
         "fieldservice_project",
         "fieldservice_purchase",
