@@ -53,6 +53,7 @@
         "web_drop_target",
         "web_group_expand",
         "web_listview_range_select",
+        "web_no_bubble",
         "web_refresher",
         "web_responsive",
         # https://github.com/OCA/social
