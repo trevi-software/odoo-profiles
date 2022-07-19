@@ -58,6 +58,8 @@
         "web_responsive",
         # https://github.com/OCA/social
         "mail_tracking",
+        # https://github.com/OCA/server-auth
+        "auth_user_case_insensitive",
     ],
     "data": [],
     "installable": True,
