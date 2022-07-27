@@ -43,7 +43,12 @@ Credits
 Authors
 ~~~~~~~
 
-* Trevi Software
+* TREVI Software
+
+Other credits
+~~~~~~~~~~~~~
+
+* Michael Telahun Makonnen <mtm@trevi.et>
 
 Maintainers
 ~~~~~~~~~~~

@@ -51,13 +51,15 @@
         "web_advanced_search",
         "web_dialog_size",
         "web_drop_target",
-        "web_environment_ribbon",
         "web_group_expand",
         "web_listview_range_select",
+        "web_no_bubble",
         "web_refresher",
         "web_responsive",
         # https://github.com/OCA/social
         "mail_tracking",
+        # https://github.com/OCA/server-auth
+        "auth_user_case_insensitive",
     ],
     "data": [],
     "installable": True,
