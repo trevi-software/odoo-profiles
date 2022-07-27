@@ -2,14 +2,14 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Ethiopia Payroll Profile",
-    "summary": "Complete payroll application",
+    "name": "Ethiopia HRM Profile",
+    "summary": "Complete human resources management application",
     "version": "14.0.1.0.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
-    "category": "Payroll",
+    "category": "Human Resources",
     "depends": [
         "profile_hrm",
         "l10n_et_hr",
@@ -17,6 +17,5 @@
     ],
     "data": [],
     "installable": True,
-    "auto_install": True,
     "application": True,
 }
