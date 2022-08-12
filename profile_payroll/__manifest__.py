@@ -33,7 +33,9 @@
         "payroll_policy_rounding",
         "payroll_register",
     ],
-    "data": [],
+    "data": [
+        "data/payroll_settings.xml",
+    ],
     "installable": True,
     "auto_install": True,
     "application": True,
