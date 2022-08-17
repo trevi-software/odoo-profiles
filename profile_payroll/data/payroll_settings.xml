@@ -6,4 +6,10 @@
             eval="('payroll.worked_days_positive', True)"
         />
     </data>
+    <data noupdate="1">
+        <function model="ir.config_parameter"
+            name="set_param"
+            eval="('payroll_payslip_report.include_category_codes', 'GROSS,DED,NET,COMP,FITA,INFO,TXBL,TXEX,DDTO')"
+        />
+    </data>
 </odoo>
