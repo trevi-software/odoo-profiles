@@ -9,7 +9,7 @@
     <data noupdate="1">
         <function model="ir.config_parameter"
             name="set_param"
-            eval="('payroll_payslip_report.include_category_codes', 'GROSS,DED,NET,COMP,FITA,INFO,TXBL,TXEX,DDTO')"
+            eval="('payroll_payslip_report.include_category_codes', 'BASIC,OT,ALW,COMP')"
         />
     </data>
 </odoo>
