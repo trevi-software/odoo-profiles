@@ -17,7 +17,19 @@ Each module in the repository addresses one area of operation and installs all m
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_et_profile_hrm](l10n_et_profile_hrm/) | 14.0.1.0.0 |  | Complete human resources management application
+[l10n_et_profile_payroll](l10n_et_profile_payroll/) | 14.0.1.0.0 |  | Complete payroll application
+[profile_base](profile_base/) | 14.0.1.0.0 |  | Base Profile
+[profile_hrm](profile_hrm/) | 14.0.1.0.0 |  | Complete Human Resources application
+[profile_payroll](profile_payroll/) | 14.0.1.0.0 |  | Complete payroll application
+[profile_sale_crm](profile_sale_crm/) | 14.0.1.0.0 |  | Modules bundle for Sales & CRM
+[profile_service_helpdesk](profile_service_helpdesk/) | 14.0.1.0.0 |  | Help Desk and Service Profile
+[profile_stock_management](profile_stock_management/) | 14.0.1.0.0 |  | Stock Management Profile
+[profile_stock_management_purchase](profile_stock_management_purchase/) | 14.0.1.0.0 |  | Stock Management + Purchasing Profile
 
 [//]: # (end addons)
 
