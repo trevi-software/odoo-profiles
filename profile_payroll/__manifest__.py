@@ -18,7 +18,6 @@
         "hr_employee_status_payroll",
         "payroll_payslip_amendment_contract_status",
         "payroll_payslip_dictionary",
-        "payroll_payslip_hr_leave_type",
         "payroll_payslip_report",
         "payroll_period_account",
         "payroll_period_base_lock",
