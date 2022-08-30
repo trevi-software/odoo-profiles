@@ -4,7 +4,7 @@
 {
     "name": "Payroll Profile",
     "summary": "Complete payroll application",
-    "version": "14.0.1.0.0",
+    "version": "14.0.2.0.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
@@ -16,6 +16,7 @@
         "hr_benefit_payroll",
         "hr_contract_values_payroll",
         "hr_employee_status_payroll",
+        "payroll_default_salary_rules",
         "payroll_payslip_amendment_contract_status",
         "payroll_payslip_dictionary",
         "payroll_payslip_report",
