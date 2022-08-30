@@ -13,6 +13,7 @@
     "depends": [
         "profile_hrm",
         "l10n_et_hr",
+        "l10n_et_hr_contract_type",
         "l10n_et_hr_employee_wizard",
     ],
     "data": [],
