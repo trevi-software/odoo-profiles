@@ -19,7 +19,6 @@
         "payroll_payslip_amendment_contract_status",
         "payroll_payslip_dictionary",
         "payroll_payslip_report",
-        "payroll_period_account",
         "payroll_period_base_lock",
         "payroll_period_contract_values",
         "payroll_period_payslip_amendment",
