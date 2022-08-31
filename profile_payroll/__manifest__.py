@@ -4,7 +4,7 @@
 {
     "name": "Payroll Profile",
     "summary": "Complete payroll application",
-    "version": "14.0.2.0.0",
+    "version": "14.0.2.1.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
@@ -32,6 +32,7 @@
         "payroll_policy_presence",
         "payroll_policy_rounding",
         "payroll_register",
+        "payroll_register_report",
     ],
     "data": [
         "data/payroll_settings.xml",
