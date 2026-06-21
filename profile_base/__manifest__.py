@@ -30,10 +30,10 @@
     "images": ["static/src/img/main_screenshot.png"],
     "depends": [
         # https://github.com/akretion/odoo-usability
-        "base_usability",
-        "base_partner_one2many_phone",
-        "partner_tree_default_base",
-        "partner_tree_default_contacts",
+        #"base_usability",
+        #"base_partner_one2many_phone",
+        #"partner_tree_default_base",
+        #"partner_tree_default_contacts",
         # https://github.com/OCA/partner-contact
         "partner_address_version",
         "partner_vat_unique",
