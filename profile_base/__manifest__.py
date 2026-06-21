@@ -35,7 +35,7 @@
         #"partner_tree_default_base",
         #"partner_tree_default_contacts",
         # https://github.com/OCA/partner-contact
-        "partner_address_version",
+        #"partner_address_version",
         "partner_vat_unique",
         # https://github.com/OCA/server-backend
         "base_user_role",
