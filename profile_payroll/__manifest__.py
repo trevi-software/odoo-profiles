@@ -4,7 +4,7 @@
 {
     "name": "Payroll Profile",
     "summary": "Complete payroll application",
-    "version": "14.0.2.1.0",
+    "version": "15.0.1.0.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
