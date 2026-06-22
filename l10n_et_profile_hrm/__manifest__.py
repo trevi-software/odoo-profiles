@@ -4,7 +4,7 @@
 {
     "name": "Ethiopia HRM Profile",
     "summary": "Complete human resources management application",
-    "version": "15.0.1.0.0",
+    "version": "16.0.1.0.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
