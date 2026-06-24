@@ -50,7 +50,6 @@
         # https://github.com/OCA/web
         "web_advanced_search",
         "web_dialog_size",
-        "web_drop_target",
         "web_group_expand",
         "web_listview_range_select",
         "web_no_bubble",
