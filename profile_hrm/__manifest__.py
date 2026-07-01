@@ -34,7 +34,6 @@
         "hr_photobooth",
         "resource_schedule",
         "trevi_hr_job_categories",
-        "trevi_hr_usability",
     ],
     "data": [],
     "installable": True,
