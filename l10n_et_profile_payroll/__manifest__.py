@@ -12,6 +12,7 @@
     "category": "Payroll",
     "depends": [
         "profile_payroll",
+        "l10n_et_hr_salary_structure_type",
         "l10n_et_payroll_FIT2025",
         "l10n_et_res_currency",
     ],
