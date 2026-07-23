@@ -4,7 +4,7 @@
 {
     "name": "Ethiopia Payroll Profile",
     "summary": "Complete payroll application",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "author": "TREVI Software",
     "images": ["static/src/img/main_screenshot.png"],
     "website": "https://github.com/trevi-software/odoo-profiles",
