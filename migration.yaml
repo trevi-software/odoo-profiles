@@ -1,0 +1,129 @@
+services:
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    env_file:
+      - .docker/odoo.env
+      - .docker/db-access.env
+    environment:
+      DOODBA_ENVIRONMENT: "${DOODBA_ENVIRONMENT-test}"
+      LIST_DB: "false"
+      ODOO_BUS_PUBLIC_SAMESITE_WS: 1
+      # To install demo data export DOODBA_WITHOUT_DEMO=false
+      WITHOUT_DEMO: "${DOODBA_WITHOUT_DEMO-all}"
+      SMTP_PORT: "1025"
+      SMTP_SERVER: smtplocal
+      # Just in case you use queue_job
+      ODOO_QUEUE_JOB_CHANNELS: "root:1"
+      PGHOST: odoo-profiles-18-0-test-db
+    restart: unless-stopped
+    depends_on:
+      - db
+      - smtp
+      - proxy_general
+    networks:
+      default:
+      globalwhitelist_shared:
+      whitelist:
+    labels:
+      doodba.domain.main: ""
+    command:
+      - odoo
+      - --workers=3
+      - --max-cron-threads=1
+
+  db:
+    extends:
+      file: common.yaml
+      service: db
+    environment:
+      DB_HOST: odoo-profiles-18-0-test-db
+    env_file:
+      - .docker/db-creation.env
+    networks:
+      default:
+        aliases:
+          - "odoo-profiles-18-0-test-db"
+    restart: unless-stopped
+
+  smtp:
+    extends:
+      file: common.yaml
+      service: smtpfake
+    restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - smtplocal
+    labels:
+      doodba.domain.main: ""
+    volumes:
+      - "smtpconf:/etc/mailhog:ro"
+    entrypoint: [sh, -c]
+    command:
+      - test -r /etc/mailhog/auth && export MH_AUTH_FILE=/etc/mailhog/auth; exec MailHog
+
+  odoo_net_setup:
+    image: ghcr.io/tecnativa/docker-whitelist-gateway-service:edge
+    network_mode: "service:odoo"
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - odoo
+      - proxy_general
+    healthcheck:
+      disable: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      MODE_RUN: "net_setup"
+      GATEWAY_NAME: "proxy_general"
+      DNS_LOCAL: "1"
+      DNS_INTERNAL_FROM_DOCKER: "1"
+      DOCKER_PROJECT: "${COMPOSE_PROJECT_NAME:-odoo-profiles-18}"
+      DOCKER_PRIMARY_SERVICE: "odoo"
+      ALLOWED_HOSTS: &proxy_allowed_hosts >-
+        accounts.google.com api.openrouteservice.org api.unsplash.com apis.google.com
+        cdnjs.cloudflare.com download.geonames.org ec.europa.eu fonts.cdnfonts.com
+        fonts.googleapis.com fonts.gstatic.com images.unsplash.com iap-services.odoo.com
+        maps.googleapis.com media-api.odoo.com olg.api.odoo.com www.google.com
+        www.googleapis.com www.gravatar.com undraw.co updates.maxmind.com
+        www.ecb.europa.eu www.xe.com sis-t.redsys.es prewww1.aeat.es
+        www2.agenciatributaria.gob.es www.openstreetmap.org nominatim.openstreetmap.org
+        www.bizkaia.eus sii.araba.eus vies.api.odoo.com
+
+  proxy_general:
+    image: ghcr.io/tecnativa/docker-whitelist-gateway-service:edge
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      net.ipv4.ip_forward: "1"
+    networks:
+      whitelist:
+        aliases:
+          - proxy_general
+      public:
+    environment:
+      MODE_RUN: "gateway"
+      ALLOWED_HOSTS: *proxy_allowed_hosts
+
+networks:
+  default:
+    internal: ${DOODBA_NETWORK_INTERNAL-true}
+    driver_opts:
+      encrypted: 1
+
+  globalwhitelist_shared:
+    external: true
+
+  inverseproxy_shared:
+    external: true
+  public:
+  whitelist:
+
+volumes:
+  filestore:
+  db:
+  smtpconf:

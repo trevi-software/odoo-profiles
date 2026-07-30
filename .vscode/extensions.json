@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "actboy168.tasks",
+    "dbaeumer.vscode-eslint",
+    "dchanco.vsc-invoke",
+    "EditorConfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "firefox-devtools.vscode-firefox-debug",
+    "mrorz.language-gettext",
+    "ms-azuretools.vscode-containers",
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "redhat.vscode-xml",
+    "samuelcolvin.jinjahtml"
+  ]
+}

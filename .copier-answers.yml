@@ -1,0 +1,73 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v9.6.1
+_src_path: https://github.com/Tecnativa/doodba-copier-template
+backup_dst: ""
+cidr_whitelist: null
+compose_version: v2+
+domains_migration: {}
+domains_prod: {}
+domains_test: {}
+gitlab_url: ""
+odoo_dbfilter: ^prod
+odoo_initial_lang: en_US
+odoo_listdb: false
+odoo_listdb_staging: false
+odoo_oci_image: ""
+odoo_proxy: traefik
+odoo_version: 18.0
+paths_with_crawlers:
+  - /web/image/website
+paths_without_crawlers:
+  - /web
+  - /website/info
+postgres_dbname: prod
+postgres_exposed: false
+postgres_username: odoo
+postgres_version: "18"
+project_author: TREVI Software
+project_license: AGPL-3.0-or-later
+project_name: odoo-profiles
+smtp_default_from: ""
+smtp_relay_host: ""
+traefik_version: 2
+use_refurb: false
+whitelist_docker_project_devel: odoo-profiles
+whitelist_docker_project_test: odoo-profiles-18
+whitelisted_hosts_devel:
+  - cdnjs.cloudflare.com
+  - fonts.googleapis.com
+  - fonts.gstatic.com
+  - www.google.com
+  - www.googleapis.com
+  - www.gravatar.com
+whitelisted_hosts_test:
+  - accounts.google.com
+  - api.openrouteservice.org
+  - api.unsplash.com
+  - apis.google.com
+  - cdnjs.cloudflare.com
+  - download.geonames.org
+  - ec.europa.eu
+  - fonts.cdnfonts.com
+  - fonts.googleapis.com
+  - fonts.gstatic.com
+  - images.unsplash.com
+  - iap-services.odoo.com
+  - maps.googleapis.com
+  - media-api.odoo.com
+  - olg.api.odoo.com
+  - www.google.com
+  - www.googleapis.com
+  - www.gravatar.com
+  - undraw.co
+  - updates.maxmind.com
+  - www.ecb.europa.eu
+  - www.xe.com
+  - sis-t.redsys.es
+  - prewww1.aeat.es
+  - www2.agenciatributaria.gob.es
+  - www.openstreetmap.org
+  - nominatim.openstreetmap.org
+  - www.bizkaia.eus
+  - sii.araba.eus
+  - vies.api.odoo.com

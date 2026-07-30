@@ -1,0 +1,155 @@
+services:
+  odoo_proxy:
+    image: ghcr.io/tecnativa/docker-whitelist:latest
+    depends_on:
+      - odoo
+    networks: &public
+      default:
+      public:
+    ports:
+      - "127.0.0.1:${PORT_PREFIX:-18}899:6899"
+      - "127.0.0.1:${PORT_PREFIX:-18}069:8069"
+      - "127.0.0.1:${PORT_PREFIX:-18}072:8072"
+    environment:
+      PORT: "6899 8069 8072"
+      TARGET: odoo
+
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    build:
+      args:
+        # To aggregate in development, use `setup-devel.yaml`
+        AGGREGATE: "false"
+        # Export these variables to own files created by odoo in your filesystem
+        UID: "${UID:-1000}"
+        GID: "${GID:-1000}"
+        # No need for this in development
+        PIP_INSTALL_ODOO: "false"
+        CLEAN: "false"
+        COMPILE: "false"
+    environment:
+      DOODBA_ENVIRONMENT: "${DOODBA_ENVIRONMENT-devel}"
+      INITIAL_LANG: "en_US"
+      LIST_DB: "true"
+      DEBUGPY_ENABLE: "${DOODBA_DEBUGPY_ENABLE:-0}"
+      PGDATABASE: &dbname devel
+      PYDEVD_RESOLVE_SYMLINKS: 1
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONOPTIMIZE: ""
+      PYTHONPATH: /opt/odoo/custom/src/odoo
+      SMTP_PORT: "1025"
+      WDB_SOCKET_SERVER: "wdb_internal"
+      WDB_WEB_PORT: "${PORT_PREFIX:-18}984"
+      # To avoid installing demo data export DOODBA_WITHOUT_DEMO=all
+      WITHOUT_DEMO: "${DOODBA_WITHOUT_DEMO-false}"
+    volumes:
+      - ./odoo/custom:/opt/odoo/custom:ro,z
+      - ./odoo/auto:/opt/odoo/auto:rw,z
+    depends_on:
+      - db
+      - smtp
+      - wdb
+      - proxy_general
+    networks:
+      default:
+      whitelist:
+    command:
+      - odoo
+      - --limit-memory-soft=0
+      - --limit-time-real-cron=9999999
+      - --limit-time-real=9999999
+      - --workers=0
+      - --dev=reload,qweb,werkzeug,xml
+
+  db:
+    extends:
+      file: common.yaml
+      service: db
+    environment:
+      POSTGRES_DB: *dbname
+      POSTGRES_PASSWORD: odoopassword
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -q -d $$POSTGRES_DB -U $$POSTGRES_USER"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgweb:
+    image: docker.io/sosedoff/pgweb
+    networks: *public
+    ports:
+      - "127.0.0.1:${PORT_PREFIX:-18}081:8081"
+    environment:
+      PGWEB_DATABASE_URL: postgres://odoo:odoopassword@db:5432/devel?sslmode=disable
+    depends_on:
+      db:
+        condition: service_healthy
+
+  smtp:
+    extends:
+      file: common.yaml
+      service: smtpfake
+    networks: *public
+    ports:
+      - "127.0.0.1:${PORT_PREFIX:-18}025:8025"
+
+  wdb:
+    image: docker.io/kozea/wdb
+    networks:
+      default:
+        aliases:
+          - wdb_internal
+      public:
+    ports:
+      - "127.0.0.1:${PORT_PREFIX:-18}984:1984"
+    # HACK https://github.com/Kozea/wdb/issues/136
+    init: true
+
+  odoo_net_setup:
+    image: ghcr.io/tecnativa/docker-whitelist-gateway-service:edge
+    network_mode: "service:odoo"
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - odoo
+      - proxy_general
+    healthcheck:
+      disable: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      MODE_RUN: "net_setup"
+      GATEWAY_NAME: "proxy_general"
+      DNS_LOCAL: "1"
+      DNS_INTERNAL_FROM_DOCKER: "1"
+      DOCKER_PROJECT: "${COMPOSE_PROJECT_NAME:-odoo-profiles}"
+      DOCKER_PRIMARY_SERVICE: "odoo"
+      ALLOWED_HOSTS: &proxy_allowed_hosts >-
+        cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com www.google.com
+        www.googleapis.com www.gravatar.com
+
+  proxy_general:
+    image: ghcr.io/tecnativa/docker-whitelist-gateway-service:edge
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      net.ipv4.ip_forward: "1"
+    networks:
+      whitelist:
+        aliases:
+          - proxy_general
+      public:
+    environment:
+      MODE_RUN: "gateway"
+      ALLOWED_HOSTS: *proxy_allowed_hosts
+networks:
+  default:
+    internal: ${DOODBA_NETWORK_INTERNAL-true}
+  public:
+  whitelist:
+
+volumes:
+  filestore:
+  db:
