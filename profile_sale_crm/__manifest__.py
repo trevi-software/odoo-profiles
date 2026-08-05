@@ -20,7 +20,7 @@
     "summary": "Modules bundle for Sales & CRM",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
-    "versioni": "17.0.1.0.0",
+    "versioni": "18.0.1.0.0",
     "images": ["static/src/img/main_screenshot.png"],
     "category": "Sales Management",
     "license": "AGPL-3",
