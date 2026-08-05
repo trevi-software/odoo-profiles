@@ -20,7 +20,7 @@
 
 {
     "name": "Stock Management + Purchasing Profile",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
