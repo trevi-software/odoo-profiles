@@ -50,7 +50,6 @@
         # https://github.com/OCA/web
         "web_dialog_size",
         "web_group_expand",
-        "web_listview_range_select",
         "web_no_bubble",
         "web_refresher",
         "web_responsive",
