@@ -48,7 +48,6 @@
         # https://github.com/OCA/server-ux
         "base_technical_features",
         # https://github.com/OCA/web
-        "web_advanced_search",
         "web_dialog_size",
         "web_group_expand",
         "web_listview_range_select",
