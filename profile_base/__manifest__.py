@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ###############################################################################
 #
 #   Module for OpenERP
@@ -21,38 +20,31 @@
 #
 ###############################################################################
 
-{'name': 'Base Profile',
- 'version': '12.0.1.0.0',
- 'author': 'Akretion, Trevi Software',
- 'website': 'http://trevi.et',
- 'license': 'AGPL-3',
- 'category': 'Generic Modules',
- 'description': """
-    This will install the minimal modules necessary to extend the base module.
- """,
- 'depends': [
-
-     # https://github.com/akretion/odoo-usability
-     'base_partner_ref',
-     'base_usability',
-     'partner_tree_default',
-
-     # https://github.com/OCA/server-brand
-     'disable_odoo_online',
-
-     # https://github.com/OCA/server-tools
-     'auditlog',
-     'scheduler_error_mailer',
-
-     # https://github.com/OCA/web
-     'web_advanced_search',
-     'web_dialog_size',
-     'web_export_view',
-     'web_responsive',
-     'web_searchbar_full_width',
- ],
- 'data': [
- ],
- 'installable': True,
- 'application': True,
- }
+{
+    "name": "Base Profile",
+    "version": "19.0.1.0.0",
+    "author": "TREVI Software",
+    "website": "https://github.com/trevi-software/odoo-profiles",
+    "license": "AGPL-3",
+    "category": "Generic Modules",
+    "depends": [
+        # https://github.com/akretion/odoo-usability
+        "base_partner_ref",
+        "base_usability",
+        "partner_tree_default",
+        # https://github.com/OCA/server-brand
+        "disable_odoo_online",
+        # https://github.com/OCA/server-tools
+        "auditlog",
+        "scheduler_error_mailer",
+        # https://github.com/OCA/web
+        "web_advanced_search",
+        "web_dialog_size",
+        "web_export_view",
+        "web_responsive",
+        "web_searchbar_full_width",
+    ],
+    "data": [],
+    "installable": True,
+    "application": True,
+}
