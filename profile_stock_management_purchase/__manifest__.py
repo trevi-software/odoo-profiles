@@ -20,7 +20,7 @@
 
 {
     "name": "Stock Management + Purchasing Profile",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
@@ -29,9 +29,9 @@
     "depends": [
         "profile_stock_management",
         # https://github.com/OCA/stock-logistics-warehouse
-        "stock_mts_mto_rule",
-        "stock_orderpoint_purchase_link",
-        "stock_request_purchase",
+        # "stock_mts_mto_rule",  # not yet migrated to 19.0 upstream
+        # "stock_orderpoint_purchase_link",  # not yet migrated to 19.0 upstream
+        # "stock_request_purchase",  # not yet migrated to 19.0 upstream
     ],
     "data": [],
     "installable": True,
