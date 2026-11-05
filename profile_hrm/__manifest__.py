@@ -4,7 +4,7 @@
 {
     "name": "HRM Profile",
     "summary": "Complete Human Resources application",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
@@ -16,10 +16,10 @@
         # https://github.com/trevi-software/trevi-hr
         "hr_accrual_bank",
         "hr_benefit",
-        "hr_contract_reference",
+        # "hr_contract_reference",  # not yet migrated to 19.0 upstream
         "hr_contract_status",
         "hr_contract_values_resource_schedule",
-        "hr_employee_id",
+        # "hr_employee_id",  # not yet migrated to 19.0 upstream
         "hr_employee_medical_examination",
         "hr_employee_relative",
         "hr_employee_seniority_months",
