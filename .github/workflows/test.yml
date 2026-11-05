@@ -55,10 +55,88 @@ jobs:
           - 5432:5432
     env:
       OCA_ENABLE_CHECKLOG_ODOO: "1"
+      # Cross-repo addon dependencies, see the step below. These forks are not
+      # published to the wheelhouse, so their addons must be declared as git
+      # requirements at run time (a committed test-requirements.txt with URLs
+      # fails the "Detect unreleased dependencies" job).
+      TREVI_HR_REPO: trevi-software/trevi-hr
+      TREVI_PAYROLL_REPO: trevi-software/trevi-payroll
+      L10N_ETHIOPIA_REPO: trevi-software/l10n-ethiopia
+      TREVI_REF: "19.0"
+      # Build the addons at their plain manifest version: whool otherwise derives
+      # a post-release segment from the git history, which a depth-1 fetch lacks.
+      WHOOL_POST_VERSION_STRATEGY_OVERRIDE: none
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Declare trevi fork dependencies as git requirements
+        run: |
+          for addon in \
+              hr_accrual_bank \
+              hr_benefit \
+              hr_benefit_payroll \
+              hr_contract_status \
+              hr_contract_values_payroll \
+              hr_contract_values_resource_schedule \
+              hr_employee_seniority_months \
+              hr_employee_status \
+              hr_employee_status_benefit \
+              hr_employee_status_payroll \
+              hr_employee_wizard \
+              hr_job_change_state \
+              hr_job_transfer \
+              hr_jobs_hierarchy \
+              hr_leave_type_unique \
+              hr_photobooth \
+              resource_schedule \
+              trevi_hr_job_categories \
+          ; do
+            echo "odoo-addon-${addon} @ git+https://github.com/${TREVI_HR_REPO}@${TREVI_REF}#subdirectory=${addon}"
+          done >> test-requirements.txt
+          for addon in \
+              payroll_default_salary_rules \
+              payroll_payslip_amendment_contract_status \
+              payroll_payslip_dictionary \
+              payroll_payslip_hr_leave_type \
+              payroll_payslip_patch \
+              payroll_payslip_report \
+              payroll_period_base_lock \
+              payroll_period_by_contract_type \
+              payroll_period_contract_values \
+              payroll_period_payslip_amendment \
+              payroll_period_processing \
+              payroll_periods \
+              payroll_policy_absence \
+              payroll_policy_accrual \
+              payroll_policy_ot \
+              payroll_policy_payslip \
+              payroll_policy_presence \
+              payroll_policy_rounding \
+              payroll_processor \
+              payroll_processor_mpesa_et \
+              payroll_register \
+              payroll_register_report \
+          ; do
+            echo "odoo-addon-${addon} @ git+https://github.com/${TREVI_PAYROLL_REPO}@${TREVI_REF}#subdirectory=${addon}"
+          done >> test-requirements.txt
+          for addon in \
+              l10n_et_hr \
+              l10n_et_hr_contract_type \
+              l10n_et_hr_employee_wizard \
+              l10n_et_hr_holidays \
+              l10n_et_hr_salary_structure_type \
+              l10n_et_payroll_FIT2025 \
+              l10n_et_report_hr_leave \
+              l10n_et_res_currency \
+              l10n_et_tz \
+          ; do
+            echo "odoo-addon-${addon} @ git+https://github.com/${L10N_ETHIOPIA_REPO}@${TREVI_REF}#subdirectory=${addon}"
+          done >> test-requirements.txt
+          # Optional dep of core attachment_indexation; without it a WARNING lands
+          # in the Odoo log and the checklog step (OCA_ENABLE_CHECKLOG_ODOO=1) fails.
+          echo "pdfminer.six" >> test-requirements.txt
+          cat test-requirements.txt
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Check licenses
