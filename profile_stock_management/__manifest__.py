@@ -20,7 +20,7 @@
 
 {
     "name": "Stock Management Profile",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
     "license": "AGPL-3",
@@ -31,20 +31,20 @@
         # https://github.com/OCA/product-attribute
         "product_code_unique",
         # https://github.com/OCA/stock-logistics-reporting
-        "stock_report_quantity_by_location",
+        # "stock_report_quantity_by_location",  # not yet migrated to 19.0 upstream
         # https://github.com/OCA/stock-logistics-warehouse
         "stock_demand_estimate",
-        "stock_inventory_chatter",
+        # "stock_inventory_chatter",  # not yet migrated to 19.0 upstream
         "stock_inventory_discrepancy",
         "stock_inventory_lockdown",
-        "stock_inventory_verification_request",
-        "stock_orderpoint_move_link",
-        "stock_packaging",
-        "stock_request",
-        "stock_request_tier_validation",
+        # "stock_inventory_verification_request",  # not yet migrated to 19.0 upstream
+        # "stock_orderpoint_move_link",  # not yet migrated to 19.0 upstream
+        # "stock_packaging",  # not yet migrated to 19.0 upstream
+        # "stock_request",  # not yet migrated to 19.0 upstream
+        # "stock_request_tier_validation",  # not yet migrated to 19.0 upstream
         # https://github.com/OCA/stock-logistics-workflow
         "stock_no_negative",
-        "stock_picking_show_backorder",
+        # "stock_picking_show_backorder",  # not yet migrated to 19.0 upstream
     ],
     "data": [],
     "installable": True,
