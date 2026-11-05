@@ -20,7 +20,7 @@
     "summary": "Modules bundle for Sales & CRM",
     "author": "TREVI Software",
     "website": "https://github.com/trevi-software/odoo-profiles",
-    "versioni": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "images": ["static/src/img/main_screenshot.png"],
     "category": "Sales Management",
     "license": "AGPL-3",
@@ -29,8 +29,8 @@
         "l10n_et",
         "sale_management",
         # https://github.com/akretion/odoo-usability
-        "product_usability",
-        "sale_usability",
+        # "product_usability",  # not yet migrated to 19.0 upstream
+        # "sale_usability",  # not yet migrated to 19.0 upstream
         # https://github.com/OCA/crm
         "crm_claim",
         "crm_lead_code",
